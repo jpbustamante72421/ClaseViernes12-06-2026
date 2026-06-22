@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>951</width>
+    <height>533</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* --- Paleta Premium: Concrete &amp; Navy --- */
+/* Fondo: #E5E7EB (Gris cemento claro - sólido y profesional) */
+/* Elementos: #F3F4F6 (Blanco humo para campos - profundidad) */
+/* Acento: #1E3A8A (Azul Navy profundo - seriedad y confianza) */
+/* Texto: #1F2937 (Gris carbón oscuro - excelente contraste) */
+
+QDialog {
+    background-color: #E5E7EB;
+}
+
+QLabel {
+    color: #374151;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+QLineEdit {
+    background-color: #F3F4F6;
+    border: 1.5px solid #D1D5DB;
+    border-radius: 4px; /* Bordes rectos para un look sólido */
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #111827;
+    selection-background-color: #1E3A8A;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #1E3A8A;
+    background-color: #FFFFFF;
+}
+
+/* Botón Principal (Navy Power) */
+QPushButton {
+    background-color: #1E3A8A;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 800;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #1E40AF;
+}
+
+QPushButton:pressed {
+    background-color: #172554;
+    padding-top: 12px;
+}
+
+/* Botón Secundario (Solid Steel) */
+QPushButton#btnCancelar {
+    background-color: #D1D5DB;
+    color: #374151;
+}
+
+QPushButton#btnCancelar:hover {
+    background-color: #9CA3AF;
+    color: #111827;
+}</string>
+  </property>
+  <widget class="QLabel" name="datolbl">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>270</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ingresa un Dato: </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_dato">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>260</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_inicio">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar al Inicio</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_final">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>40</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar al Final</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_imprimir">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>40</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imprimir</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_eliminar_ini">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>150</y>
+     <width>151</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar Inicial</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_buscar">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>40</y>
+     <width>181</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Busar Dato</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_eliminar_fin">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>150</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar Final</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>340</y>
+     <width>861</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Resultado de tu elección:</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

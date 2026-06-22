@@ -1,27 +1,60 @@
 from estructuras.lineales.nodo import Node
-class Linkedlist: 
+
+class Nodo:
+    def __init__(self, dato):
+        self.dato = dato
+        self.next = None
+
+class LinkedList:
     def __init__(self):
         self.head = None
-        self.tail = None
-    
-    def insert_at_beginning(self,data):
-        #Paso número 1: Crear un nuevo nodo con el dato a insertar
-        new_node = Node(data)
-        #Paso número 2: Verificar si la lista está vacía
-        if self.head is None and self.tail is None:
-            #Si la lista está vacía, el nuevo nodo se convierte en la cabeza y la cola de la lista
-            self.head = new_node
-            self.tail = new_node
-        else:
-            #Paso número 3: Si la lista no está vacía, el nuevo nodo apunta a la cabeza actual de la lista
-            new_node.next = self.head
-            #Paso número 4: El nuevo nodo se convierte en la nueva cabeza de la lista
-            self.head = new_node    
 
-    def print_linked_list(self):
-        temp = self.head
-        print("Head -> ", end="")
-        while temp is not None:
-            print(temp.data,"->", end="")
-            temp = temp.next
-        print("<- Tail")
+    def insert_at_beginning(self, dato):
+        nuevo_nodo = Nodo(dato)
+        nuevo_nodo.next = self.head
+        self.head = nuevo_nodo
+
+    def insert_at_end(self, dato):
+        nuevo_nodo = Nodo(dato)
+        if not self.head:
+            self.head = nuevo_nodo
+            return
+        actual = self.head
+        while actual.next:
+            actual = actual.next
+        actual.next = nuevo_nodo
+
+    def delete_at_beginning(self):
+        if self.head:
+            self.head = self.head.next
+
+    def delete_at_end(self):
+        if not self.head: return
+        if not self.head.next:
+            self.head = None
+            return
+        actual = self.head
+        while actual.next.next:
+            actual = actual.next
+        actual.next = None
+
+    def search(self, dato):
+        actual = self.head
+        while actual:
+            if str(actual.dato) == str(dato):
+                return True
+            actual = actual.next
+        return False
+
+    def get_list(self):
+        """Genera el formato: Head -> 1 -> 2 -> 3 -> Tail"""
+        nodos = []
+        actual = self.head
+        while actual:
+            nodos.append(str(actual.dato))
+            actual = actual.next
+        
+        if not nodos:
+            return "Head -> None"
+        
+        return "Head -> " + " -> ".join(nodos) + " -> Tail"

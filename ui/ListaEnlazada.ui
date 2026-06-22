@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QMainWindow</class>
+ <widget class="QMainWindow" name="QMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>546</width>
+    <height>307</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* --- Paleta de Colores ---
+   Fondo: #F3F4F6
+   Primario: #2563EB (Azul Inteligente)
+   Texto Principal: #1F2937
+   Borde/Input: #D1D5DB
+*/
+
+QDialog {
+    background-color: #F3F4F6;
+}
+
+QLabel {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D1D5DB;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #111827;
+    selection-background-color: #BFDBFE;
+    selection-color: #1E40AF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #2563EB;
+    background-color: #FFFFFF;
+}
+
+/* Botón Principal */
+QPushButton {
+    background-color: #2563EB;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+QPushButton:hover {
+    background-color: #1D4ED8;
+}
+
+QPushButton:pressed {
+    background-color: #1E40AF;
+    padding-top: 12px; /* Efecto de empuje */
+}
+
+/* Botón Secundario (Estilo Ghost/Light) */
+QPushButton#btnCancelar {
+    background-color: #E5E7EB;
+    color: #374151;
+}
+
+QPushButton#btnCancelar:hover {
+    background-color: #D1D5DB;
+}
+
+QPushButton#btnCancelar:pressed {
+    background-color: #9CA3AF;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>80</y>
+      <width>401</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Estructuras 
+Juan Pablo Bustamante Martínez 
+ICO 301-9</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>546</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="estructuras">
+    <property name="title">
+     <string>Estructuras</string>
+    </property>
+    <widget class="QMenu" name="menuLineales">
+     <property name="title">
+      <string>Lineales</string>
+     </property>
+     <addaction name="Lista_Enlazada"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="menuLineales"/>
+    <addaction name="salir"/>
+   </widget>
+   <addaction name="estructuras"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action2_Insertar_Final">
+   <property name="text">
+    <string>2. Insertar Final</string>
+   </property>
+  </action>
+  <action name="action3_Buscar">
+   <property name="text">
+    <string>3. Buscar</string>
+   </property>
+  </action>
+  <action name="action4_Imprimir">
+   <property name="text">
+    <string>4. Imprimir</string>
+   </property>
+  </action>
+  <action name="salir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="Lista_Enlazada">
+   <property name="text">
+    <string>Lista Enlazada</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
