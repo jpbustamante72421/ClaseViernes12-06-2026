@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>387</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* --- Paleta Premium: Forest &amp; Concrete --- */
+/* Fondo: #E5E7EB (Gris cemento claro) */
+/* Elementos: #F3F4F6 (Blanco humo) */
+/* Acento: #064E3B (Verde Bosque Profundo - elegancia, estabilidad) */
+/* Texto: #1F2937 (Gris carbón oscuro) */
+
+QDialog {
+    background-color: #E5E7EB;
+}
+
+QLabel {
+    color: #374151;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+QLineEdit {
+    background-color: #F3F4F6;
+    border: 1.5px solid #D1D5DB;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #111827;
+    selection-background-color: #064E3B;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #064E3B;
+    background-color: #FFFFFF;
+}
+
+/* Botón Principal (Forest Power) */
+QPushButton {
+    background-color: #064E3B;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 800;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #065F46;
+}
+
+QPushButton:pressed {
+    background-color: #022C22;
+    padding-top: 12px;
+}
+
+/* Botón Secundario (Solid Steel) */
+QPushButton#btnCancelar {
+    background-color: #D1D5DB;
+    color: #374151;
+}
+
+QPushButton#btnCancelar:hover {
+    background-color: #9CA3AF;
+    color: #111827;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btn_push">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>50</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Push</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pop">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>50</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pop</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_top">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>50</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Top</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_print">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>50</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_dato">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dato:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_dato">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>160</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_pila">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>280</y>
+     <width>471</width>
+     <height>71</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_pila">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>300</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pila:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

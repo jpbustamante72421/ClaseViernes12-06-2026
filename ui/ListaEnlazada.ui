@@ -118,6 +118,7 @@ ICO 301-9</string>
       <string>Lineales</string>
      </property>
      <addaction name="Lista_Enlazada"/>
+     <addaction name="actionPilas"/>
     </widget>
     <addaction name="separator"/>
     <addaction name="menuLineales"/>
@@ -149,6 +150,11 @@ ICO 301-9</string>
   <action name="Lista_Enlazada">
    <property name="text">
     <string>Lista Enlazada</string>
+   </property>
+  </action>
+  <action name="actionPilas">
+   <property name="text">
+    <string>Pilas</string>
    </property>
   </action>
  </widget>

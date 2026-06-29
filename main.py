@@ -2,6 +2,7 @@ from loads.load_menu import MenuListaEnlazada
 import sys
 from PyQt5.QtWidgets import QApplication
 def main():
+    
     app = QApplication(sys.argv)
     ventana = MenuListaEnlazada()
     ventana.show()
@@ -9,3 +10,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
