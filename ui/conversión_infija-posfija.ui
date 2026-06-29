@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>341</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* --- Paleta: Slate Blue &amp; Cool Grey --- */
+/* Fondo: #F8FAFC (Blanco azulado muy suave) */
+/* Acento: #475569 (Azul Pizarra - sobrio y tecnológico) */
+
+QDialog { background-color: #F8FAFC; }
+
+QLabel { color: #334155; font-weight: 600; }
+
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    color: #1E293B;
+}
+QLineEdit:focus { border: 1.5px solid #475569; }
+
+QPushButton { 
+    background-color: #475569; 
+    color: #F1F5F9; 
+}
+QPushButton:hover { background-color: #334155; }</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>70</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Expresión Infija:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>70</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>160</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Realizar conversión</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>260</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Resultado...</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

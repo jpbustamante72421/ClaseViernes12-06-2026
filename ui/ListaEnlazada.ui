@@ -124,7 +124,14 @@ ICO 301-9</string>
     <addaction name="menuLineales"/>
     <addaction name="salir"/>
    </widget>
+   <widget class="QMenu" name="menuAplicaciones">
+    <property name="title">
+     <string>Aplicaciones</string>
+    </property>
+    <addaction name="actionConversion"/>
+   </widget>
    <addaction name="estructuras"/>
+   <addaction name="menuAplicaciones"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action2_Insertar_Final">
@@ -155,6 +162,11 @@ ICO 301-9</string>
   <action name="actionPilas">
    <property name="text">
     <string>Pilas</string>
+   </property>
+  </action>
+  <action name="actionConversion">
+   <property name="text">
+    <string>Conversión infija-posfija</string>
    </property>
   </action>
  </widget>
