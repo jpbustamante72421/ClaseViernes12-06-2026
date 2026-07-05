@@ -44,3 +44,29 @@ class InfijaAPosfija:
             posfija += pila.pop()
             
         return posfija
+    
+    def evaluar(self, expresion_posfija):
+        pila = Stack()
+        
+        for caracter in expresion_posfija:
+            # 1. Si es dígito, lo convertimos a entero y lo apilamos
+            if caracter.isdigit():
+                pila.push(int(caracter))
+            
+            # 2. Si es operador, extraemos dos operandos
+            elif caracter in self.precedencia:
+                val2 = pila.pop() # El primero en salir es el operando derecho
+                val1 = pila.pop() # El segundo es el operando izquierdo
+                
+                # 3. Realizar la operación sin eval()
+                if caracter == '+': res = val1 + val2
+                elif caracter == '-': res = val1 - val2
+                elif caracter == '*': res = val1 * val2
+                elif caracter == '/': res = val1 / val2
+                elif caracter == '$': res = val1 ** val2
+                
+                # 4. Apilar el resultado parcial
+                pila.push(res)
+        
+        # El resultado final queda en el tope de la pila
+        return pila.pop()
