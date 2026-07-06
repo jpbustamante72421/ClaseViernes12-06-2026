@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>882</width>
+    <height>461</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* --- Paleta Premium: Burnt Orange &amp; Minimalist --- */
+/* Fondo: #FAFAFA (Blanco brillante muy limpio) */
+/* Elementos: #FFFFFF (Blanco puro para campos) */
+/* Acento: #EA580C (Naranja Quemado - energía y enfoque) */
+/* Texto: #262626 (Negro suave, alta legibilidad) */
+
+QDialog {
+    background-color: #FAFAFA;
+}
+
+QLabel {
+    color: #404040;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #E5E5E5;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #171717;
+    selection-background-color: #EA580C;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #EA580C;
+    background-color: #FFFFFF;
+}
+
+/* Botón Principal (Energy Power) */
+QPushButton {
+    background-color: #EA580C;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 800;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #C2410C;
+}
+
+QPushButton:pressed {
+    background-color: #9A3412;
+    padding-top: 12px;
+}
+
+/* Botón Secundario (Soft Neutral) */
+QPushButton#btnCancelar {
+    background-color: #E5E5E5;
+    color: #525252;
+}
+
+QPushButton#btnCancelar:hover {
+    background-color: #D4D4D4;
+    color: #171717;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btn_enqueue">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>30</y>
+     <width>191</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar elemento </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_dequeue">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>30</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar el primer elemento</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_print">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>30</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imprimir los elementos</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_first">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>100</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Devuelve primer elemento</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_last">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>100</y>
+     <width>241</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Devuelve último elemento</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>280</y>
+     <width>861</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Resultado de tu elección:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_dato">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>200</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="datolbl">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>210</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ingresa un Dato: </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

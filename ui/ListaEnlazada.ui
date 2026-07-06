@@ -119,6 +119,7 @@ ICO 301-9</string>
      </property>
      <addaction name="Lista_Enlazada"/>
      <addaction name="actionPilas"/>
+     <addaction name="actionQueue"/>
     </widget>
     <addaction name="separator"/>
     <addaction name="menuLineales"/>
@@ -167,6 +168,11 @@ ICO 301-9</string>
   <action name="actionConversion">
    <property name="text">
     <string>Conversión infija-posfija</string>
+   </property>
+  </action>
+  <action name="actionQueue">
+   <property name="text">
+    <string>Queue</string>
    </property>
   </action>
  </widget>
