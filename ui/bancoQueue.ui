@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>753</width>
+    <height>469</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* --- Estilo: Emerald Banking Pro --- */
+
+QDialog {
+    background-color: #F0FDF4; /* Fondo verde muy claro y relajante */
+}
+
+/* Título imponente */
+QLabel#label { 
+    color: #065F46; 
+    font-size: 40px; 
+    font-weight: 900; 
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+}
+
+/* Etiquetas pequeñas y elegantes */
+QLabel {
+    color: #064E3B;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Input con borde sutil pero marcado */
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 2px solid #A7F3D0;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    color: #064E3B;
+}
+
+QLineEdit:focus {
+    border: 2px solid #059669;
+}
+
+/* --- BOTONES CON PERSONALIDAD --- */
+
+/* Botón Turno: Acción Principal */
+QPushButton#btnTurno { 
+    background-color: #059669; 
+    color: white; 
+    border-radius: 6px; 
+    font-weight: 800;
+    padding: 10px;
+}
+QPushButton#btnTurno:hover { background-color: #047857; }
+
+/* Botón Atender: Acción de Proceso */
+QPushButton#btnAtender { 
+    background-color: #34D399; 
+    color: #064E3B; 
+    border-radius: 6px; 
+    font-weight: 800;
+    padding: 10px;
+}
+QPushButton#btnAtender:hover { background-color: #10B981; }
+
+/* Botón Cerrar: Acción de Salida */
+QPushButton#btnCerrar { 
+    background-color: #D1FAE5; 
+    color: #065F46; 
+    border-radius: 6px; 
+    font-weight: 800;
+    padding: 10px;
+}
+QPushButton#btnCerrar:hover { background-color: #A7F3D0; }
+</string>
+  </property>
+  <widget class="QLabel" name="titulo">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>10</y>
+     <width>311</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sistema de Banco</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>90</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>90</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Número de Cliente:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>80</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Turno</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>170</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Atender</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>150</y>
+     <width>291</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vacío</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>390</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cerrar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>270</y>
+     <width>391</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vacío</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

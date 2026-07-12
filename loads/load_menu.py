@@ -1,9 +1,11 @@
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5 import uic
+from loads.load_banco import DialogoBanco
 from loads.load_lista_enlazada_simple import DialogoListaEnlazada
 from loads.load_dialogo_pila import DialogoPilas 
 from loads.load_conversion_fijainfija import VentanaConversion
 from loads.load_queue import DialogoColas
+from loads.load_banco import DialogoBanco
 
 class MenuListaEnlazada(QMainWindow):
     def __init__(self):
@@ -14,6 +16,7 @@ class MenuListaEnlazada(QMainWindow):
         self.actionPilas.triggered.connect(self.abrir_ventana_pilas)
         self.actionQueue.triggered.connect(self.abrir_ventana_colas)
         self.actionConversion.triggered.connect(self.procesar_conversion)
+        self.actionBanco.triggered.connect(self.abrir_ventana_banco)
 
     def abrir_ventana_lista(self):
         self.ventana_lista = DialogoListaEnlazada()
@@ -30,3 +33,6 @@ class MenuListaEnlazada(QMainWindow):
     def abrir_ventana_colas(self):
         self.ventana_colas = DialogoColas()
         self.ventana_colas.exec_()
+    def abrir_ventana_banco(self):
+        self.ventana_banco = DialogoBanco()
+        self.ventana_banco.exec_()
