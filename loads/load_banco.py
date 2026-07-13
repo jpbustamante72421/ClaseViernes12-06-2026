@@ -1,4 +1,5 @@
-from PyQt5.QtWidgets import QDialog, QMessageBox
+import datetime
+from PyQt5.QtWidgets import QDialog
 from PyQt5 import uic
 from estructuras.aplicaciones.banco import Banco
 
@@ -17,14 +18,23 @@ class DialogoBanco(QDialog):
         if cliente:
             self.lineEdit.setText(str(cliente.turno))
             self.actualizar_cola()
+            self.label_4.setText(f"Turno {cliente.turno} agregado.")
         else:
-            QMessageBox.warning(self, "Aviso", "El banco ya está cerrado para nuevos clientes.")
+            self.label_4.setText("Aviso: Banco cerrado.")
 
     def atender_cliente(self):
+        # Capturamos la hora actual al momento de atender
+        hora_atencion = datetime.datetime.now()
+        
         cliente, espera = self.banco.atender_cliente()
         if cliente:
             m, s = divmod(int(espera.total_seconds()), 60)
-            self.label_4.setText(f"Atendiendo Turno: {cliente.turno}\nEspera: {m}m {s}s")
+            self.label_4.setText(
+                f"Atendiendo Turno: {cliente.turno}\n"
+                f"Hora de entrada: {cliente.hora_entrada.strftime('%H:%M:%S')}\n"
+                f"Hora de salida: {hora_atencion.strftime('%H:%M:%S')}\n"
+                f"Espera: {m}m {s}s"
+            )
         else:
             self.label_4.setText("No hay clientes en espera.")
         self.actualizar_cola()
@@ -41,16 +51,16 @@ class DialogoBanco(QDialog):
             self.label_3.setText(texto_lista)
 
     def cerrar_banco(self):
-        # 1. Bloqueamos nuevos ingresos
         self.banco.cerrar_banco()
         
-        # 2. Verificamos si aún hay clientes para poder cerrar la ventana
         if not self.banco.cola_clientes.isEmpty():
-            QMessageBox.information(self, "Cierre", "Se ha bloqueado la entrada.\nSiga atendiendo a los clientes restantes.")
+            self.label_4.setText("Entrada bloqueada.\nAtienda los clientes restantes.")
         else:
-            # Si ya no hay clientes, mostramos el reporte final
             total = self.banco.clientes_atendidos
             promedio = (self.banco.tiempo_total_espera.total_seconds() / total) if total > 0 else 0
             m, s = divmod(int(promedio), 60)
-            QMessageBox.information(self, "Cierre", f"Banco finalizado.\nAtendidos: {total}\nPromedio: {m}m {s}s")
-            self.close()
+            self.label_4.setText(f"Banco finalizado.\nAtendidos: {total}\nPromedio: {m}m {s}s")
+            # Deshabilitamos botones para evitar errores tras el cierre
+            self.pushButton.setEnabled(False)
+            self.pushButton_2.setEnabled(False)
+            self.pushButton_3.setEnabled(False)

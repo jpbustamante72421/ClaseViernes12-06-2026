@@ -49,20 +49,4 @@ class Queue(object):
     
     def isEmpty(self):
         return self.first is None
-    
-cola = Queue()
-cola.enqueue(5)
-cola.enqueue(8)
-cola.enqueue(3)
-
-print(cola.printQueue()) # [5, 8, 3]
-print(cola.firstQueue()) # 5
-print(cola.lastQueue()) # 3
-print(cola.dequeue()) # 5
-print(cola.printQueue()) # [8, 3]
-
-cola.enqueue(9)
-
-print(cola.printQueue()) # [8, 3, 9]
-print(cola.dequeue()) # 8
-print(cola.printQueue()) # [3, 9]
+ 

@@ -35,7 +35,5 @@ class Banco:
         return None, None
 
     def cerrar_banco(self):
-        # Bloqueamos ingresos sin importar si hay gente en cola
         self.banco_abierto = False
-        # Retornamos True siempre, porque el banco ya está en "modo cierre"
         return True

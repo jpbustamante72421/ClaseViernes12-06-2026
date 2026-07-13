@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>753</width>
+    <width>726</width>
     <height>469</height>
    </rect>
   </property>
@@ -14,75 +14,75 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">/* --- Estilo: Emerald Banking Pro --- */
-
+   <string notr="true">/* --- Fondo: Gris Acero Profundo --- */
 QDialog {
-    background-color: #F0FDF4; /* Fondo verde muy claro y relajante */
+    background-color: #2D3436; 
 }
 
-/* Título imponente */
-QLabel#label { 
-    color: #065F46; 
-    font-size: 40px; 
-    font-weight: 900; 
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
-}
-
-/* Etiquetas pequeñas y elegantes */
+/* --- TÍTULOS Y ETIQUETAS --- */
 QLabel {
-    color: #064E3B;
-    font-size: 12px;
+    color: #F1F2F6;
     font-weight: 700;
 }
 
-/* Input con borde sutil pero marcado */
+/* Título Sistema de Banco - Grande y blanco */
+QLabel#label {
+    font-size: 44px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    font-weight: 900;
+}
+
+/* Campos de entrada */
 QLineEdit {
-    background-color: #FFFFFF;
-    border: 2px solid #A7F3D0;
+    background-color: #485460;
+    border: 1px solid #74808A;
     border-radius: 6px;
     padding: 10px;
-    font-size: 14px;
-    color: #064E3B;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-QLineEdit:focus {
-    border: 2px solid #059669;
+/* --- Etiquetas de datos (&quot;Vacíos&quot;) con letra más pequeña --- */
+QLabel#label_3, QLabel#label_4 {
+    background-color: #485460;
+    border: 1px solid #74808A;
+    border-radius: 4px;
+    padding: 8px;
+    color: #FFFFFF;
+    font-size: 12px; /* Letra más pequeña y técnica */
+    font-weight: 500;
 }
 
-/* --- BOTONES CON PERSONALIDAD --- */
+/* --- BOTONES: ESCALA DE GRISES --- */
 
-/* Botón Turno: Acción Principal */
-QPushButton#btnTurno { 
-    background-color: #059669; 
-    color: white; 
-    border-radius: 6px; 
+/* Botón Turno: Gris claro */
+QPushButton#btnTurno {
+    background-color: #DCDDE1;
+    color: #2D3436;
     font-weight: 800;
-    padding: 10px;
+    border-radius: 6px;
+    padding: 8px;
 }
-QPushButton#btnTurno:hover { background-color: #047857; }
 
-/* Botón Atender: Acción de Proceso */
-QPushButton#btnAtender { 
-    background-color: #34D399; 
-    color: #064E3B; 
-    border-radius: 6px; 
+/* Botón Atender: Gris medio */
+QPushButton#btnAtender {
+    background-color: #B2BEC3;
+    color: #2D3436;
     font-weight: 800;
-    padding: 10px;
+    border-radius: 6px;
+    padding: 8px;
 }
-QPushButton#btnAtender:hover { background-color: #10B981; }
 
-/* Botón Cerrar: Acción de Salida */
-QPushButton#btnCerrar { 
-    background-color: #D1FAE5; 
-    color: #065F46; 
-    border-radius: 6px; 
+/* Botón Cerrar: Gris oscuro */
+QPushButton#btnCerrar {
+    background-color: #7F8C8D;
+    color: #FFFFFF;
     font-weight: 800;
-    padding: 10px;
-}
-QPushButton#btnCerrar:hover { background-color: #A7F3D0; }
-</string>
+    border-radius: 6px;
+    padding: 8px;
+}</string>
   </property>
   <widget class="QLabel" name="titulo">
    <property name="geometry">
@@ -152,9 +152,9 @@ QPushButton#btnCerrar:hover { background-color: #A7F3D0; }
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>150</y>
-     <width>291</width>
+     <x>20</x>
+     <y>160</y>
+     <width>251</width>
      <height>191</height>
     </rect>
    </property>
@@ -178,9 +178,9 @@ QPushButton#btnCerrar:hover { background-color: #A7F3D0; }
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>350</x>
      <y>270</y>
-     <width>391</width>
+     <width>261</width>
      <height>181</height>
     </rect>
    </property>
