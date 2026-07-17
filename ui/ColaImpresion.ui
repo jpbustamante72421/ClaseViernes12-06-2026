@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sistema de Gestión de Impresión - Piel Impresa Suite</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow { background-color: #1e1e1e; }
+    QGroupBox { color: #4a90e2; font-weight: bold; border: 1px solid #333; margin-top: 10px; padding: 10px; border-radius: 5px; }
+    QLabel { color: #dcdcdc; font-size: 13px; font-weight: 500; }
+    QLineEdit, QSpinBox { background-color: #2d2d2d; border: 1px solid #444; color: #fff; padding: 8px; border-radius: 4px; }
+    QPushButton { background-color: #4a90e2; color: #fff; font-weight: bold; border-radius: 4px; padding: 10px; }
+    QPushButton:hover { background-color: #357abd; }
+    QTableWidget { background-color: #252525; alternate-background-color: #2d2d2d; border: 1px solid #444; color: #fff; }
+    QHeaderView::section { background-color: #333; color: #4a90e2; padding: 6px; border: none; font-weight: bold; }
+    QTextEdit { background-color: #252525; border: 1px solid #444; color: #a9b7c6; font-family: 'Consolas', monospace; padding: 5px; }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="mainLayout">
+    <property name="spacing"><number>20</number></property>
+    <item>
+     <widget class="QGroupBox" name="grpControles">
+      <property name="title"><string>Configuración de Trabajo</string></property>
+      <layout class="QVBoxLayout" name="layoutIzquierdo">
+       <item><widget class="QLabel" name="l_u"><property name="text"><string>Usuario:</string></property></widget></item>
+       <item><widget class="QLineEdit" name="txtUsuario"/></item>
+       <item><widget class="QLabel" name="l_d"><property name="text"><string>Nombre del documento:</string></property></widget></item>
+       <item><widget class="QLineEdit" name="txtDocumento"/></item>
+       <item><widget class="QLabel" name="l_p"><property name="text"><string>Número de páginas:</string></property></widget></item>
+       <item><widget class="QSpinBox" name="spinPaginas"><property name="minimum"><number>1</number></property></widget></item>
+       <item><spacer name="spacer1"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property></spacer></item>
+       <item><widget class="QPushButton" name="btnAgregar"><property name="text"><string>AGREGAR A COLA</string></property></widget></item>
+       <item><widget class="QPushButton" name="btnImprimir"><property name="text"><string>IMPRIMIR SIGUIENTE</string></property></widget></item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="layoutDerecho">
+      <item><widget class="QLabel" name="l_cola"><property name="text"><string>Cola en espera:</string></property></widget></item>
+      <item>
+       <widget class="QTableWidget" name="tblCola">
+        <property name="columnCount"><number>4</number></property>
+        <column><property name="text"><string>ID</string></property></column>
+        <column><property name="text"><string>Usuario</string></property></column>
+        <column><property name="text"><string>Documento</string></property></column>
+        <column><property name="text"><string>Páginas</string></property></column>
+       </widget>
+      </item>
+      <item><widget class="QLabel" name="l_log"><property name="text"><string>Log de Actividad:</string></property></widget></item>
+      <item><widget class="QTextEdit" name="txtLog"><property name="readOnly"><bool>true</bool></property></widget></item>
+      <item>
+       <layout class="QFormLayout" name="formLayoutStatus">
+        <item row="0" column="0"><widget class="QLabel" name="label_1"><property name="text"><string>Trabajos pendientes:</string></property></widget></item>
+        <item row="0" column="1"><widget class="QLabel" name="lblTotal"><property name="text"><string>0</string></property></widget></item>
+        <item row="1" column="0"><widget class="QLabel" name="label_2"><property name="text"><string>Al frente de la fila:</string></property></widget></item>
+        <item row="1" column="1"><widget class="QLabel" name="lblFrente"><property name="text"><string>Vacío</string></property></widget></item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+</ui> 

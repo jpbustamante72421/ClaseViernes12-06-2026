@@ -6,6 +6,7 @@ from loads.load_dialogo_pila import DialogoPilas
 from loads.load_conversion_fijainfija import VentanaConversion
 from loads.load_queue import DialogoColas
 from loads.load_banco import DialogoBanco
+from loads.load_cola_impr import VentanaImpresion
 
 class MenuListaEnlazada(QMainWindow):
     def __init__(self):
@@ -17,6 +18,7 @@ class MenuListaEnlazada(QMainWindow):
         self.actionQueue.triggered.connect(self.abrir_ventana_colas)
         self.actionConversion.triggered.connect(self.procesar_conversion)
         self.actionBanco.triggered.connect(self.abrir_ventana_banco)
+        self.actionColaImpresion.triggered.connect(self.abrir_ventana_cola_impresion)
 
     def abrir_ventana_lista(self):
         self.ventana_lista = DialogoListaEnlazada()
@@ -36,3 +38,7 @@ class MenuListaEnlazada(QMainWindow):
     def abrir_ventana_banco(self):
         self.ventana_banco = DialogoBanco()
         self.ventana_banco.exec_()
+
+    def abrir_ventana_cola_impresion(self):
+        self.ventana_cola_impresion = VentanaImpresion()
+        self.ventana_cola_impresion.show()

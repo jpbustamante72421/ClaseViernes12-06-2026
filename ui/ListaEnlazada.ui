@@ -131,6 +131,7 @@ ICO 301-9</string>
     </property>
     <addaction name="actionConversion"/>
     <addaction name="actionBanco"/>
+    <addaction name="actionColaImpresion"/>
    </widget>
    <addaction name="estructuras"/>
    <addaction name="menuAplicaciones"/>
@@ -179,6 +180,11 @@ ICO 301-9</string>
   <action name="actionBanco">
    <property name="text">
     <string>Banco</string>
+   </property>
+  </action>
+  <action name="actionColaImpresion">
+   <property name="text">
+    <string>Cola Impresión</string>
    </property>
   </action>
  </widget>
