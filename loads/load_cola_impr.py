@@ -42,7 +42,7 @@ class VentanaImpresion(QMainWindow):
     def procesar_trabajo(self):
         trabajo = self.gestor.procesar_siguiente()
         if trabajo:
-            self.txtLog.append(f"🖨️ Procesando: {trabajo.documento}")
+            self.txtLog.append(f"🖨️ Procesando: {trabajo.documento} de {trabajo.usuario}")
         else:
             self.txtLog.append("⚠️ Advertencia: No hay trabajos en cola.")
             
@@ -53,9 +53,16 @@ class VentanaImpresion(QMainWindow):
         cantidad = self.gestor.cola.size() if hasattr(self.gestor.cola, 'size') else 0
         self.lblTotal.setText(f"Pendientes: {cantidad}")
         
+        # --- MEJORA: Mostrar usuario y documento al frente ---
         frente = self.gestor.consultar_frente()
-        nombre_doc = frente.documento if frente is not None else "Vacío"
-        self.lblFrente.setText(f"Frente: {nombre_doc}")
+        if frente is not None:
+            # Se muestra el documento y el usuario en el label de frente
+            texto_frente = f"Frente: {frente.documento} (Usuario: {frente.usuario})"
+        else:
+            texto_frente = "Frente: Vacío"
+            
+        self.lblFrente.setText(texto_frente)
+        # ----------------------------------------------------
         
         # Actualización de tabla
         self.tblCola.setRowCount(0)
