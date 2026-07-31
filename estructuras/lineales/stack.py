@@ -39,3 +39,8 @@ class Stack:
 
     def is_empty(self):
         return self.head is None
+
+    # Agrégalo dentro de tu clase Stack (en estructuras/lineales/stack.py):
+def __len__(self):
+    # Ajusta 'self._items' o el nombre de la estructura interna que use tu pila
+    return len(self._items)

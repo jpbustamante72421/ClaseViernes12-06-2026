@@ -1,3 +1,5 @@
+from estructuras.lineales.stack import Stack
+
 class NodeTree:
     def __init__(self, value):
         self.value = value  # valor almacenado

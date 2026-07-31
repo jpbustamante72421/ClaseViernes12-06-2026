@@ -7,6 +7,8 @@ from loads.load_conversion_fijainfija import VentanaConversion
 from loads.load_queue import DialogoColas
 from loads.load_banco import DialogoBanco
 from loads.load_cola_impr import VentanaImpresion
+from loads.load_arbol_expresion import ExpressionTreeGUI
+
 
 class MenuListaEnlazada(QMainWindow):
     def __init__(self):
@@ -19,6 +21,7 @@ class MenuListaEnlazada(QMainWindow):
         self.actionConversion.triggered.connect(self.procesar_conversion)
         self.actionBanco.triggered.connect(self.abrir_ventana_banco)
         self.actionColaImpresion.triggered.connect(self.abrir_ventana_cola_impresion)
+        self.actionArbol_Expresion.triggered.connect(self.abrir_ventana_arbol_expresion)
 
     def abrir_ventana_lista(self):
         self.ventana_lista = DialogoListaEnlazada()
@@ -42,3 +45,7 @@ class MenuListaEnlazada(QMainWindow):
     def abrir_ventana_cola_impresion(self):
         self.ventana_cola_impresion = VentanaImpresion()
         self.ventana_cola_impresion.show()
+
+    def abrir_ventana_arbol_expresion(self):
+        self.ventana_arbol_expresion = ExpressionTreeGUI()
+        self.ventana_arbol_expresion.show()

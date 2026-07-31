@@ -121,9 +121,16 @@ ICO 301-9</string>
      <addaction name="actionPilas"/>
      <addaction name="actionQueue"/>
     </widget>
+    <widget class="QMenu" name="menuNo_Lineales">
+     <property name="title">
+      <string>No Lineales</string>
+     </property>
+     <addaction name="actionArbol_Expresion"/>
+    </widget>
     <addaction name="separator"/>
     <addaction name="menuLineales"/>
     <addaction name="salir"/>
+    <addaction name="menuNo_Lineales"/>
    </widget>
    <widget class="QMenu" name="menuAplicaciones">
     <property name="title">
@@ -185,6 +192,11 @@ ICO 301-9</string>
   <action name="actionColaImpresion">
    <property name="text">
     <string>Cola Impresión</string>
+   </property>
+  </action>
+  <action name="actionArbol_Expresion">
+   <property name="text">
+    <string>Arbol Expresion</string>
    </property>
   </action>
  </widget>

@@ -8,7 +8,8 @@ def mostrar_menu():
     print("4. Recorrido en inorden")
     print("5. Recorrido en posorden")
     print("6. Contar nodo")
-    print("7. Salir")
+    print("7. Árbol de expresión")
+    print("8. Salir")
 
 tree = BinaryTree()
 
@@ -48,8 +49,10 @@ while True:
 
     elif option == "6":
         print(tree.contar())
-        
+
     elif option == "7":
+        print (tree.build_expression_tree(input("Ingresa la expresión postfija: ")))
+    elif option == "8":
         print("Programa finalizado.")
         break
     else:
