@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GrafosWindow</class>
+ <widget class="QWidget" name="GrafosWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1050</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Grafos no dirigidos</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget {
+        background-color: #f8fafc;
+        color: #1e293b;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    QLabel {
+        color: #334155;
+    }
+    QLabel#label_title {
+        color: #0f172a;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    QLineEdit {
+        background-color: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        padding: 6px 12px;
+        color: #0f172a;
+    }
+    QLineEdit:focus {
+        border: 2px solid #2563eb;
+    }
+    QComboBox {
+        background-color: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        padding: 5px 10px;
+        color: #0f172a;
+    }
+    QComboBox:focus {
+        border: 2px solid #2563eb;
+    }
+    QComboBox::drop-down {
+        subcontrol-origin: padding;
+        subcontrol-position: top right;
+        width: 25px;
+        border-left-width: 0px;
+    }
+    QPushButton {
+        background-color: #2563eb;
+        color: #ffffff;
+        border-radius: 6px;
+        padding: 7px 14px;
+        font-weight: 600;
+    }
+    QPushButton:hover {
+        background-color: #1d4ed8;
+    }
+    QPushButton:pressed {
+        background-color: #1e40af;
+    }
+    QPushButton#btnClearGraph {
+        background-color: #dc2626;
+    }
+    QPushButton#btnClearGraph:hover {
+        background-color: #b91c1c;
+    }
+    QGroupBox {
+        font-weight: bold;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        margin-top: 12px;
+        background-color: #ffffff;
+        padding-top: 14px;
+    }
+    QGroupBox::title {
+        subcontrol-origin: margin;
+        subcontrol-position: top left;
+        padding: 0 6px;
+        background-color: #f8fafc;
+        color: #1e293b;
+    }
+    QTabWidget::pane {
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        background-color: #ffffff;
+    }
+    QTabBar::tab {
+        background-color: #e2e8f0;
+        color: #475569;
+        padding: 8px 16px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-right: 2px;
+        font-weight: 600;
+    }
+    QTabBar::tab:selected {
+        background-color: #2563eb;
+        color: #ffffff;
+    }
+    QGraphicsView, QTableWidget, QPlainTextEdit {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        gridline-color: #f1f5f9;
+        color: #0f172a;
+    }
+    QHeaderView::section {
+        background-color: #f1f5f9;
+        color: #334155;
+        padding: 6px;
+        border: none;
+        border-bottom: 1px solid #cbd5e1;
+        font-weight: bold;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_main">
+   <property name="spacing">
+    <number>16</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="label_title">
+     <property name="text">
+      <string>Grafos no dirigidos</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_controls">
+     <property name="spacing">
+      <number>16</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="groupBox_vertices">
+       <property name="title">
+        <string>Vértices</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_vertices">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="txtVertex">
+          <property name="placeholderText">
+           <string>Nombre del vértice</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnAddVertex">
+          <property name="text">
+           <string>Agregar vértice</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cmbVertex"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnDeleteVertex">
+          <property name="text">
+           <string>Eliminar vértice</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_arcos">
+       <property name="title">
+        <string>Arcos</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_arcos">
+        <property name="horizontalSpacing">
+         <number>10</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>10</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_origin">
+          <property name="text">
+           <string>Vértice 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cmbOrigin"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_destination">
+          <property name="text">
+           <string>Vértice 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cmbDestination"/>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QPushButton" name="btnAddEdge">
+          <property name="text">
+           <string>Agregar arco</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QPushButton" name="btnDeleteEdge">
+          <property name="text">
+           <string>Eliminar arco</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget_representations">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_visual">
+      <attribute name="title">
+       <string>Representación visual</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_visual">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QGraphicsView" name="graphicsViewGraph">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRedrawGraph">
+         <property name="text">
+          <string>Redibujar grafo</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_matrix">
+      <attribute name="title">
+       <string>Matriz de adyacencia</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_matrix">
+       <item>
+        <widget class="QTableWidget" name="tblAdjacencyMatrix">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_adjacency_list">
+      <attribute name="title">
+       <string>Lista de adyacencia</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_adj_list">
+       <item>
+        <widget class="QPlainTextEdit" name="txtAdjacencyList">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_edges_list">
+      <attribute name="title">
+       <string>Lista de arcos</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_edges_list">
+       <item>
+        <widget class="QTableWidget" name="tblEdges">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <column>
+          <property name="text">
+           <string>Vértice 1</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Vértice 2</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_footer">
+     <item>
+      <widget class="QLabel" name="lblGraphStatus">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Vértices: 0 | Arcos: 0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClearGraph">
+       <property name="text">
+        <string>Limpiar grafo</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,6 +1,7 @@
 from loads.load_menu import MenuListaEnlazada
 import sys
 from PyQt5.QtWidgets import QApplication
+
 def main():
     
     app = QApplication(sys.argv)

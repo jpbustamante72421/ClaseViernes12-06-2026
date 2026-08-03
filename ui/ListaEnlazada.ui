@@ -126,6 +126,7 @@ ICO 301-9</string>
       <string>No Lineales</string>
      </property>
      <addaction name="actionArbol_Expresion"/>
+     <addaction name="actionGrafo"/>
     </widget>
     <addaction name="separator"/>
     <addaction name="menuLineales"/>
@@ -197,6 +198,11 @@ ICO 301-9</string>
   <action name="actionArbol_Expresion">
    <property name="text">
     <string>Arbol Expresion</string>
+   </property>
+  </action>
+  <action name="actionGrafo">
+   <property name="text">
+    <string>Grafo</string>
    </property>
   </action>
  </widget>
